@@ -15,7 +15,7 @@
     <script src="./public/js/app.js" defer></script>
 </head>
 <body>
-    <form id="contact-save" action="/ajax/save/contact">
+    <form id="contact-save" action="/ajax/save/contact" method="POST">
         <div>
             <label for="firstname">firstname:</label>
             <input type="text" name="firstname" id="">
@@ -35,7 +35,6 @@
 
         <div class="hidden success">Contact enregistré avec success.</div>
         <div class="hidden error">Une erreur est survenue pendant l'enregistrement.</div>
-        <p id="test">Info : </p>
     </form>
 </body>
 </html>
