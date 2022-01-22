@@ -20,6 +20,15 @@ if(
     $sname = $_POST['lastname'];
     $email = $_POST['email']; 
 
+    $contacts = fopen("./public/contacts/contacts.txt", "w+"); //https://stackoverflow.com/questions/21113919/difference-between-r-and-w-in-fopen
+    //$actualContent = file_get_contents($contacts); 
+    //fwrite($contacts, $actualContent . "\r\n");
+    fwrite($contacts,  $fname . "#" . $sname . "#" . $email. "\r\n"); 
+
+    fclose($contacts); 
+
+    #file_put_contents("./public/contacts/contacts.txt", $fname . "#" . $sname . "#" . $email. "\r\n");
+
     #$status = "200"; 
     $return = array(
         'status' => 200,
