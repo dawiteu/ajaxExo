@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/css/app.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous" defer></script>
+
+    <script src="./public/js/app.js" defer></script>
+</head>
+<body>
+    <form id="contact-save" action="/ajax/save/contact">
+        <div>
+            <label for="firstname">firstname:</label>
+            <input type="text" name="firstname" id="">
+        </div>
+        <div>
+            <label for="lastname">lastname:</label>
+            <input type="text" name="lastname" id="">
+        </div>
+        <div>
+            <label for="email">email:</label>
+            <input type="text" name="email" id="">
+        </div>
+
+        <div>
+            <input type="submit" value="Envoyer">
+        </div>
+
+        <div class="hidden success">Contact enregistré avec success.</div>
+        <div class="hidden error">Une erreur est survenue pendant l'enregistrement.</div>
+        <p id="test">Info : </p>
+    </form>
+</body>
+</html>
